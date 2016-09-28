@@ -1,31 +1,14 @@
 <?php
 /**
- * This program is free software; you can redistribute it and/or
- * modify it under the terms of the GNU General Public License
- * as published by the Free Software Foundation; under version 2
- * of the License (non-upgradable).
+ * Copyright (c) 2016.
  *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program; if not, write to the Free Software
- * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
- *
- * Copyright (c) 2016  (original work) Open Assessment Technologies SA;
- * 
- * @author Alexander Zagovorichev <zagovorichev@1pt.com>
+ * @author Alexander Zagovorichev <zagovorichev@gmail.com>
  */
 
-namespace oat\taoRestApiDocs\model\proxy\format;
+namespace swaggerCollector\src;
 
 
-use oat\taoRestApiDocs\model\proxy\DocsProxyInterface;
-
-
-class Swagger2_0 implements DocsProxyInterface
+class Swagger2_0
 {
 
     private $requiredStructure = [
@@ -48,19 +31,19 @@ class Swagger2_0 implements DocsProxyInterface
     {
         foreach ($structure as $key => $value) {
             if (!isset($object->$key)) {
-                \common_Logger::w('Property "' . $key . '" not found in the Swagger2.0 required structure');
-                return false;
+                throw new RestApiDocsException('Property "' . $key . '" not found in the Swagger2.0 required structure');
             }
 
             if (is_array($value)) {
+
                 if ($object->$key instanceof \stdClass) {
                     return self::check($value, $object->$key);
                 }else{
                     return false;
                 }
-            }elseif (is_string($value) && !empty($value) && $object->$key !== $value) {
-                \common_Logger::w('In property "' . $key . '" for Swagger2.0 required structure should be value "'. $value .'"');
-                return false;
+
+            } elseif (is_string($value) && !empty($value) && $object->$key !== $value) {
+                throw new RestApiDocsException('In property "' . $key . '" for Swagger2.0 required structure should be value "'. $value .'"');
             }
         }
         return true;

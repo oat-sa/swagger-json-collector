@@ -11,6 +11,7 @@
         }
     ],
     "psr-4" : {
-        "swaggerCollector\\" : ""
+        "swaggerCollector\\" : "src/",
+        "swaggerCollector\\tests\\" : "tests/"
     }
 }

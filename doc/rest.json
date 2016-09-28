@@ -2,13 +2,13 @@
   "swagger": "2.0",
   "info": {
     "version": "1.0.0",
-    "title": "TAO RestApi Documentation",
-    "description": "Rest API interface for TAO.\n\n[Learn about TAO](http://www.taotesting.com/).",
-    "termsOfService": "http://www.taotesting.com/resources/faq/",
+    "title": "RestApi Documentation",
+    "description": "Rest API protocol description",
+    "termsOfService": "http://example.com/faq",
     "contact": {
-      "name": "Open Assessment Technologies S.A.",
-      "email": "contact@taotesting.com",
-      "url": "http://www.taotesting.com/contact/"
+      "name": "Company name",
+      "email": "contact@example.com",
+      "url": "http://www.example.com/contact/"
     },
     "license": {
       "name": "GNU General Public License",
