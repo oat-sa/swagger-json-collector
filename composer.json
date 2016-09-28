@@ -1,0 +1,16 @@
+{
+    "name": "alexanderzagovoriche/swagger-json-collector",
+    "description": "Combine swagger2.0 docs into new one documentation",
+    "require": {
+        "phpunit/phpunit": "^5.5"
+    },
+    "authors": [
+        {
+            "name": "Alexander Zagovorichev",
+            "email": "zagovorichev@gmail.com"
+        }
+    ],
+    "psr-4" : {
+        "swaggerCollector\\" : ""
+    }
+}
