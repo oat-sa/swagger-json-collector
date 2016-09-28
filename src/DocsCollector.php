@@ -5,10 +5,10 @@
  * @author Alexander Zagovorichev <zagovorichev@gmail.com>
  */
 
-namespace swaggerCollector\src;
+namespace swaggerCollector;
 
 
-use swaggerCollector\src\helper\RestDocHelper;
+use swaggerCollector\helper\RestDocHelper;
 
 class DocsCollector
 {

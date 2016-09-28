@@ -5,7 +5,7 @@
  * @author Alexander Zagovorichev <zagovorichev@gmail.com>
  */
 
-namespace swaggerCollector\src;
+namespace swaggerCollector;
 
 
 class RestApiDocsException extends \Exception

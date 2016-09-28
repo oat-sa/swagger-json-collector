@@ -5,10 +5,10 @@
  * @author Alexander Zagovorichev <zagovorichev@gmail.com>
  */
 
-namespace swaggerCollector\src\helper;
+namespace swaggerCollector\helper;
 
 
-use swaggerCollector\src\RestApiDocsException;
+use swaggerCollector\RestApiDocsException;
 
 class RestDocHelper
 {

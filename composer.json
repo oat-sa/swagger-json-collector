@@ -11,7 +11,9 @@
         }
     ],
     "psr-4" : {
-        "swaggerCollector\\" : "src/",
-        "swaggerCollector\\tests\\" : "tests/"
+        "swaggerCollector\\" : "src"
+    },
+    "autoload-dev" : {
+        "swaggerCollector\\tests\\" : "tests"
     }
 }

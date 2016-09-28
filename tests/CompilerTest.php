@@ -9,7 +9,7 @@ namespace swaggerCollector\tests;
 
 
 use PHPUnit_Framework_TestCase;
-use swaggerCollector\src\DocsCollector;
+use swaggerCollector\DocsCollector;
 
 class CompilerTest extends PHPUnit_Framework_TestCase
 {
