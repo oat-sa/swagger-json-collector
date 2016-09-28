@@ -22,7 +22,7 @@ class Swagger2_0
         "tags" => true
     ];
 
-    public function valid(\stdClass $swagger)
+    public function validate(\stdClass $swagger)
     {
         return $this->check($this->requiredStructure, $swagger);
     }
@@ -51,7 +51,12 @@ class Swagger2_0
     
     public function append(\stdClass $docs, \stdClass $part)
     {
-        
+        try {
+            $this->validate($part);
+        } catch (RestApiDocsException $e) {
+            throw new RestApiDocsException('Incorrect file structure');
+        }
+
         // description
         $title = $part->info->title .' '. $part->info->version;
         $docs->info->description .= "\n\n## " . $title;

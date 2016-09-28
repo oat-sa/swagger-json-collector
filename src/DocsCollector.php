@@ -37,5 +37,8 @@ class DocsCollector
         foreach (array_unique($paths) as $path) {
             $documentation = $this->swagger->append($documentation, RestDocHelper::getJsonFromFile($path));
         }
+
+        return $documentation;
     }
+
 }
