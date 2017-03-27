@@ -1,6 +1,6 @@
 {
-    "name": "swagger/json-collector",
-    "description": "Combine swagger2.0 docs into new one documentation",
+    "name": "oat-sa/swagger-json-collector",
+    "description": "Combine multiple swagger 2.0 documents into a single document",
     "require-dev": {
         "phpunit/phpunit": "^5.5"
     },
