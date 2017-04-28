@@ -1,11 +1,15 @@
 # swagger-json-collector
-Collects all the documentation JSON files for the Swagger 2.0 into new one
+Combines Swagger docs from various sources
 
 ### Example of usage
 
-```
+Valid input formats are files that contains JSON, or JSON strings or PHP arrays. Formats can be mixed within the input array.
+
+```php
 $collector = new DocsCollector();
-$doc = $collector->generate(['file1.json', 'file2.json']);
+
+
+$doc = $collector->generate(['swagger.json', '{ "swagger": "2.0",...}'], [ 'swagger' => '2.0',...]]);
 
 file_put_contents('swaggerDoc.json', json_encode($doc))
 ```

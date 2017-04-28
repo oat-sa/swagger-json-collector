@@ -2,17 +2,17 @@
   "swagger": "2.0",
   "info": {
     "version": "1.0.0",
-    "title": "RestApi Documentation",
-    "description": "Rest API protocol description",
-    "termsOfService": "http://example.com/faq",
+    "title": "",
+    "description": "",
+    "termsOfService": "",
     "contact": {
-      "name": "Company name",
-      "email": "contact@example.com",
-      "url": "http://www.example.com/contact/"
+      "name": "",
+      "email": "",
+      "url": ""
     },
     "license": {
-      "name": "GNU General Public License",
-      "url": "http://www.gnu.org/licenses/gpl.html"
+      "name": "",
+      "url": ""
     }
   },
   "schemes": [
